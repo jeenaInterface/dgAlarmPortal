@@ -1,19 +1,6 @@
 Feature: Verify if the contact update feature functions correctly when the APM checkbox is enabled.
 
   @APMEnabled
-  Scenario: Delete one contact from BoldNet
-    When User navigates to the BoldNet application
-    When User enter the username in BoldNet
-    When User enter the password in BoldNet
-    When User click on the login button in BoldNet
-    When Click on search button in home page
-    When Enter search text
-    When Click on search icon
-    When Click on search Result
-    When Click on contact menu
-    When Delete an account containing the text Code To Assign 041
-
-  @APMEnabled
   Scenario: Enable APM checkbox in oracle
     When User navigates to the oracle application
     When User enter the username 
@@ -24,31 +11,16 @@ Feature: Verify if the contact update feature functions correctly when the APM c
     When Click on APM checkbox
     When Click on Save
     
-@APMEnabled1
-  Scenario: Update an account in Security Manager
-    When User navigates to the security application
-    Given User enter the username in security Manager
-    Given User enter the password in security Manager
-    When User click on the login button in security Manager
-    When Click Home link
-    When Click on a test panel 
-    When Create new row and add details or udate existing details
-    When Click on contact button
-    When Verify success message
-
 @APMEnabled
-    Scenario: Verify new contact is created in BoldNet
-    When User navigates to the BoldNet application
-    When User enter the username in BoldNet
-    When User enter the password in BoldNet
-    When User click on the login button in BoldNet
-    When Click on search button in home page
-    When Enter search text
-    When Click on search icon
-    When Click on search Result
-    When Click on contact menu
-    # When select contact Code To Assign 041
-    When Verify new contact is created in BoldNet
+  Scenario:UPDATE A CONTACT IN DG ALARM PORTAL (DG-TEST2) TO VERIFY THE AUTOMATION
+    When User navigates to the dgAlarmPortal application
+    When Search a site
+    When Click on Alarm Panel Code Change Request
+    When Enter Passcode 
+    When Click on submit
+    When Edit a contact
+    When Click on submit button
+    When Verify Success Message
 
  @APMEnabled
   Scenario: Check case is created in apm
