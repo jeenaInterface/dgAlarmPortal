@@ -1,8 +1,5 @@
 import { expect, Page } from "@playwright/test";
 import PlaywrightWrapper from "../helper/wrapper/PlaywrightWrappers";
-import interactiveLiteSearch from "../pages/interactiveLitSearch";
-
-let interactiveLiteSearchPage: interactiveLiteSearch;
 
 export default class Oracle {
     private base: PlaywrightWrapper
@@ -10,8 +7,7 @@ export default class Oracle {
     constructor(private page: Page) {
 
         this.base = new PlaywrightWrapper(page);
-        interactiveLiteSearchPage = new interactiveLiteSearch(page)
-
+       
     }
 
 
@@ -22,7 +18,7 @@ export default class Oracle {
         errorMessage: "alert",
         searchButton: "//a[@id='pt1:_UISgsnfsb']",
         searchBox: "Search",
-        textAccount: "Account: Interface Security Systems_INT01N",
+        textAccount: "Dollar General Dg23781",
         profileTab: "//a[@id='_FOpt1:_FOr1:0:_FONSr2:0:_FOTsr1:0:pt1:r1:0:pt1:Profile::disAcr']",
         // profile_tab: page.get_by_role("link", name="Profile")
         apmEnabledCheckbox: "(//label[@class='x17h'])[2]",
@@ -132,24 +128,6 @@ export default class Oracle {
         await this.page.locator(this.Elements.AllOpenServiceRequests).click();
 
     }
-
-    async VerifySr() {
-
-            await this.base.waitAndClick(this.Elements.searchReferanceNumber)
-            const srNo1 = await interactiveLiteSearchPage.returnMessage()
-            console.log(srNo1)
-            const srNo = await interactiveLiteSearchPage.returnSRNo()
-            await this.base.waitAndClick(this.Elements.searchReferanceNumber)
-            await this.page.locator(this.Elements.searchReferanceNumber).fill(srNo);
-            await this.page.locator(this.Elements.findbutton).click()
-            const SRinTable = this.page.locator(this.Elements.tableEntry);
-            const isSRVisible = await SRinTable.isVisible();
-            if (isSRVisible) {
-                console.log('SR is existing and visible in the table.');
-            } else {
-                console.log('SR is not existing or visible in the table.');
-            }
-        }
 
         }
 

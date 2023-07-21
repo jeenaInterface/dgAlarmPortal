@@ -6,7 +6,7 @@ Feature: Verify if the contact update feature functions correctly when the APM c
     When User enter the username 
     When User enter the password
     When User click on the login button
-    When Search Interface security Account Sytems
+    When Search Dollar General Dg23781
     When Click on Profile Tab
     When Click on APM checkbox
     When Click on Save
@@ -18,9 +18,8 @@ Feature: Verify if the contact update feature functions correctly when the APM c
     When Click on Alarm Panel Code Change Request
     When Enter Passcode 
     When Click on submit
-    When Edit a contact
-    When Click on submit button
-    When Verify Success Message
+    When Edit a contact and submit
+    When Verify success message
 
  @APMEnabled
   Scenario: Check case is created in apm

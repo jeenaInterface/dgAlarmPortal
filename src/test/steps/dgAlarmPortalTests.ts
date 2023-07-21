@@ -38,7 +38,7 @@ When('Click on submit', async function () {
     fixture.logger.info("Waiting for 2 seconds") 
 });
 
-When('Edit a contact', async function () {
+When('Edit a contact and submit', async function () {
     await dgAlarmPortalPage.FillDetails()
 });
 

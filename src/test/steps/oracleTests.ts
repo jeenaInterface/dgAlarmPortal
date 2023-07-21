@@ -4,13 +4,9 @@ import { expect } from "@playwright/test";
 import { fixture } from "../../hooks/pageFixture";
 import Oracle from "../../pages/Oracle";
 import * as data from "../../helper/util/test-data/loginCredentials.json"
-import interactiveLiteSearch from "../../pages/interactiveLitSearch";
-
 
 setDefaultTimeout(60 * 1000 * 2)
 let oraclePage: Oracle
-let interactiveLiteSearchPage: interactiveLiteSearch
-
 
 Given('User navigates to the oracle application', async function () {
     oraclePage = new Oracle(fixture.page)
@@ -40,7 +36,7 @@ When('User click on the login button', async function () {
     await fixture.page.waitForTimeout(2000);
 });
 
-When('Search Interface security Account Sytems', async function () {
+When('Search Dollar General Dg23781', async function () {
     await oraclePage.clickSearchButton();
     await fixture.page.waitForLoadState();
     fixture.logger.info("Waiting for 2 seconds")
@@ -114,9 +110,4 @@ When('click on Service Request Icon', async function () {
 
 When('Select All Open Service Requests from the list', async function () {
     await oraclePage.ListDDLActions();
-});
-
-When('Verify SR is created after submit Interactive Lite search', async function () {
-    await oraclePage.VerifySr()
-
 });
