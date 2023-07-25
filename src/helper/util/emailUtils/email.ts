@@ -21,7 +21,7 @@ async function sendEmail() {
       attachments: [
         {
           filename: 'cucumber-report.html',
-          path: '/SecurityManager/test-results/cucumber-report.html',
+          path: '/dgAlarmPortal/test-results/cucumber-report.html',
         },
       ],
     };
