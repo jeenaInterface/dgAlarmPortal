@@ -4,7 +4,7 @@ report.generate({
     jsonDir: "test-results",
     reportPath: "test-results/reports/",
     reportName: "Interface Automation Report",
-    pageTitle: "DGSecurity Test Report",
+    pageTitle: "DG Alarm Test Report",
     displayDuration: false,
     metadata: {
         browser: {
@@ -20,7 +20,7 @@ report.generate({
     customData: {
         title: "Test Info",
         data: [
-            { label: "Project", value: "DG Security Manager" },
+            { label: "Project", value: "DG Alarm Test Report" },
             { label: "Release", value: "1.2.3" },
             { label: "Cycle", value: "Sanity" }
         ],

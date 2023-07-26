@@ -13,7 +13,7 @@
     When Click on Save
     
 @APMDisEnabled1
-  Scenario: UPDATE A CONTACT IN DG ALARM PORTAL (DG-TEST2) TO VERIFY THE AUTOMATION
+  Scenario: UPDATE A CONTACT IN DG ALARM PORTAL (DG-TEST2)
     When User navigates to the dgAlarmPortal application
     When Search a site
     When Click on Alarm Panel Code Change Request

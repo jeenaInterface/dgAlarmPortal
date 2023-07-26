@@ -12,7 +12,7 @@ Feature: Verify if the contact update feature functions correctly when the APM c
     When Click on Save
     
 @APMEnabled
-  Scenario:UPDATE A CONTACT IN DG ALARM PORTAL (DG-TEST2) TO VERIFY THE AUTOMATION
+  Scenario:UPDATE A CONTACT IN DG ALARM PORTAL (DG-TEST2)
     When User navigates to the dgAlarmPortal application
     When Search a site
     When Click on Alarm Panel Code Change Request
