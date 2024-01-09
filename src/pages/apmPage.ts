@@ -14,7 +14,7 @@ export default class APMPage {
         loginBtn: "//button[@type= 'submit']",
         queqeLink:"//a[text()='Queue']",
         LatestcreatedDate: "//table/tbody/tr[1]/td[5]",
-        panelType: "//table/tbody/tr[1]/td[3]"
+        panelType: "(//tr[@role='row']//td)[3]",
  }
 
     async navigateToLoginPage() {

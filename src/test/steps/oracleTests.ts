@@ -36,6 +36,7 @@ When('User click on the login button', async function () {
     await fixture.page.waitForTimeout(2000);
 });
 
+
 When('Search Dollar General Dg23781', async function () {
     await oraclePage.clickSearchButton();
     await fixture.page.waitForLoadState();

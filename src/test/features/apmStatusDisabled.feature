@@ -12,7 +12,7 @@
     When Uncheck on APM checkbox
     When Click on Save
     
-@APMDisEnabled1
+@APMDisEnabled
   Scenario: UPDATE A CONTACT IN DG ALARM PORTAL (DG-TEST2)
     When User navigates to the dgAlarmPortal application
     When Search a site

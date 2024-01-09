@@ -16,7 +16,7 @@ export default class dgAlarmPortal {
 
         passwordInput: "//input[@id='MainContent_LoginUser_Password']",
         storeLocator: "//input[@id='caseSiteSearchInput']",
-        firstItem: "//a[@id='site_DG-TEST2']",
+        firstItem: "//a[@id='site_DG-TEST']",
         password: "//input[@id='password']",
         AlarmPanelCodeChangeRequest: "//span[text()='Alarm Panel Code Change Request']",
         submitButton: "//input[@id='submitPasscode']",
@@ -41,7 +41,7 @@ export default class dgAlarmPortal {
 
     async clickstoreLocator() {
         await this.base.waitAndClick(this.Elements.storeLocator);
-        await this.page.locator(this.Elements.storeLocator).fill("DG-TEST2")
+        await this.page.locator(this.Elements.storeLocator).fill("DG-TEST")
     }
 
 
@@ -55,7 +55,7 @@ export default class dgAlarmPortal {
     }
     async enterPassword() {
         await this.base.waitAndClick(this.Elements.password);
-        await this.page.locator(this.Elements.password).type("7765");
+        await this.page.locator(this.Elements.password).type("6977");
         await this.base.waitAndClick(this.Elements.password);
     }
 
@@ -87,7 +87,7 @@ export default class dgAlarmPortal {
         await this.base.waitAndClick(this.Elements.saveChanges);
 
         await this.base.waitAndClick(this.Elements.SubmitChanges);
-        await this.page.locator(this.Elements.storePassword).type("7765");
+        await this.page.locator(this.Elements.storePassword).type("6977");
         await this.base.waitAndClick(this.Elements.submit);
 
     }
